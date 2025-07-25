@@ -20,7 +20,9 @@ export default class ClassController {
 
      async index({response}: HttpContext) {
         try{
+            console.log("inside index");
             const c = await ClassRepository.fetchAll()
+            console.log(c);
             return response.ok({
                 success: true,
                 class : c

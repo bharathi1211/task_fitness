@@ -6,6 +6,7 @@ import { memberStoreSchema ,memberIdSchema, memberUpdateSchema} from '../validat
 export default class MemberController {
     async store({ request }:HttpContext ) {
         try {
+            await console.log(request.body())
             const memberData = await memberStoreSchema.validate(request.body());
             const member = await MemberRepository.create(memberData);
             const joined_at = member.joinedAt;

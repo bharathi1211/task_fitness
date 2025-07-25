@@ -17,6 +17,7 @@ export default class ClassRepository {
   }
   static async fetchAll(){
       const c = await Class.all()
+      console.log("repo : ",c);
       return c;
   }
   
