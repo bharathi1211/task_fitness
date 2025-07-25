@@ -109,7 +109,7 @@ h1 {
 }
 
 .nav-link:hover {
-  background-color: #4f2b48;
+  background-color: #8d5576;
 }
 
 .main-content {
