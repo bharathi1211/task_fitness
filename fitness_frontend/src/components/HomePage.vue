@@ -6,16 +6,10 @@
     </div>
 
     <div class="sidebar" :class="{ open: isSidebarOpen }">
-      <router-link to="/member" class="nav-link" @click="closeSidebar">Member</router-link>
+      <router-link to="/member/login" class="nav-link" @click="closeSidebar">Member</router-link>
     </div>
 
     <div class="main-content" @click="closeSidebar">
-        <p class="intro">Welcome to OUR FITNESS  
-           Your Journey to a Healthier Life Begins Here.
-
-           At OUR FITNESS, we believe fitness is not just about the body — it's a lifestyle.
-           Whether you're a beginner or an athlete, we provide the right environment, guidance, and support to help you reach your goals.
-        </p>
       <slot />
     </div>
   </div>
@@ -54,6 +48,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  /* background-color: #fbc7c7; */
 }
 
 .my-bg::before {
@@ -63,7 +58,7 @@ body {
   background-image: url('@/assets/bg.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.5; 
+  opacity: 0.2; 
   z-index: -1;
 }
 
@@ -114,10 +109,12 @@ h1 {
   color: #3F1D38;
   text-decoration: none;
   font-size: 1rem;
+  text-align: center;
 }
 
 .nav-link:hover {
   background-color: #8d5576;
+  color:#E19898
 }
 
 .main-content {
